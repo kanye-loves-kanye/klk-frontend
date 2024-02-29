@@ -1,24 +1,59 @@
 import logo from './logo.svg';
 import './App.css';
+import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
+import AboutUs from "./components/AboutUs";
+import Footer from "./components/Footer";
+import Header from "./components/Header";
+import Collection from './pages/Collection';
+import Home from "./pages/Home";
+import Inspiration from "./pages/Inspiration";
+import KLKEdit from "./pages/KLKEdit";
+import KLKNewItem from "./pages/KLKNewItem";
+import MyCollection from "./pages/MyCollection";
+import SignIn from "./pages/SignIn";
+import SignUp from "./pages/SignUp";
+import TypeOfYe from "./pages/TypeOfYe";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Router>
+      <div className="App">
+        <Header />
+        <Switch>
+          <Route exact path="/">
+            <Home />
+          </Route>
+          <Route path="/about">
+            <AboutUs />
+          </Route>
+          <Route path="/collection">
+            <Collection />
+          </Route>
+          <Route path="/inspiration">
+            <Inspiration />
+          </Route>
+          <Route path="/klk-edit">
+            <KLKEdit />
+          </Route>
+          <Route path="/klk-new-item">
+            <KLKNewItem />
+          </Route>
+          <Route path="/my-collection">
+            <MyCollection />
+          </Route>
+          <Route path="/sign-in">
+            <SignIn />
+          </Route>
+          <Route path="/sign-up">
+            <SignUp />
+          </Route>
+          <Route path="/type-of-ye">
+            <TypeOfYe />
+          </Route>
+        </Switch>
+        <Footer />
+      </div>
+    </Router>
   );
 }
 
