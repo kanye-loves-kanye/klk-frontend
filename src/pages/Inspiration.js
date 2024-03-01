@@ -1,7 +1,9 @@
 import React from 'react'
 
-export const Inspiration = () => {
+const Inspiration = () => {
   return (
     <div>Inspiration</div>
   )
 }
+
+export default Inspiration
