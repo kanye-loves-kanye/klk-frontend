@@ -1,7 +1,9 @@
 import React from 'react'
 
-export const KLKNewItem = () => {
+const KLKNewItem = () => {
   return (
     <div>KLKNewItem</div>
   )
 }
+
+export default KLKNewItem

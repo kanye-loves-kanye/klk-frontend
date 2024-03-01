@@ -1,7 +1,9 @@
 import React from 'react'
 
-export const KLKNotFound = () => {
+const KLKNotFound = () => {
   return (
     <div>KLKNotFound</div>
   )
 }
+
+export default KLKNotFound

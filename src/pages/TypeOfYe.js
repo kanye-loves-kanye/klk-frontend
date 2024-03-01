@@ -1,7 +1,9 @@
 import React from 'react'
 
-export const TypeOfYe = () => {
+const TypeOfYe = () => {
   return (
     <div>TypeOfYe</div>
   )
 }
+
+export default TypeOfYe

@@ -14,16 +14,15 @@ import SignIn from "./pages/SignIn";
 import SignUp from "./pages/SignUp";
 import TypeOfYe from "./pages/TypeOfYe";
 
-function App() {
+const App = () => {
   return (
     <Router>
       <div className="App">
         <Header />
-        <Switch>
           <Route exact path="/">
             <Home />
           </Route>
-          <Route path="/about">
+          <Route path="/aboutus">
             <AboutUs />
           </Route>
           <Route path="/collection">
@@ -50,7 +49,6 @@ function App() {
           <Route path="/type-of-ye">
             <TypeOfYe />
           </Route>
-        </Switch>
         <Footer />
       </div>
     </Router>
