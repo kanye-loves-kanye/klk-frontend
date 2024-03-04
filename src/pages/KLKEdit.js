@@ -1,9 +1,7 @@
-import React from 'react'
+import React from "react";
 
 const KLKEdit = () => {
-  return (
-    <div>KLKEdit</div>
-  )
-}
+  return <div>KLKEdit</div>;
+};
 
-export default KLKEdit
+export default KLKEdit;

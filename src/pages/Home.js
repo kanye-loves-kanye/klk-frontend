@@ -1,14 +1,7 @@
-import React from "react"
-import Homepage from "../assets/Homepage.jpeg"
+import React from "react";
+import Homepage from "../assets/Homepage.jpeg";
 
-
-    const Home = () => {
-      return (
-        <img
-          src={Homepage}
-          alt="HiResHome"
-          className="main-content-image"
-        />
-      )
-    }
-export default Home
+const Home = () => {
+  return <img src={Homepage} alt='HiResHome' className='main-content-image' />;
+};
+export default Home;

@@ -1,34 +1,35 @@
 .App {
   text-align: center;
+  min-height: 100vh; 
+  display: flex;
+  flex-direction: column;
 }
 
-.header {
+.header-nav {
+  font-family: "Oswald", sans-serif;
+  background-color: #f5f5dc;
+  color: #f6f3f2;
+  padding: 10px;
+  text-align: left;
+  align-items: center;
   display: flex;
-  padding: 1rem;
-  background-color: rgba(0, 0, 0, 0.3);
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  font-weight: bold;
-  letter-spacing: 3px;
-  z-index: 1;
+  justify-content: space-between;
 }
 
 .footer {
-  background-color: transparent;
-  color: #fff;
   padding: 1rem;
-  position: fixed;
-  bottom: 0;
-  width: 100%;
-  display: flex;
-  justify-content: flex-center;
-  background-color: rgba(0, 0, 0, 0.3);
+  background-color: rgb(7, 7, 7) !important;
+  color: #fff;
+  margin-top: auto;
+}
+
+.footer a {
+  color: rgba(247, 247, 247, 0.777) !important;
 }
 
 .main-content-image {
-  width: 100rem;
+  max-width: 100%;
+  height: auto;
 }
 
 .overlay {
@@ -39,9 +40,17 @@
 }
 
 .notfoundtext {
-
 }
 
 .Noyeezy {
-  
+}
+
+a {
+  font-family: "Oswald", sans-serif;
+  color: #dc0404 !important;
+  text-decoration: none !important;
+}
+
+a.active {
+  text-decoration: underline !important;
 }

@@ -1,3 +1,4 @@
+import React, { useState } from "react";
 import "./App.css";
 import { Routes, Route } from "react-router-dom";
 import AboutUs from "./components/AboutUs";
@@ -15,10 +16,14 @@ import TypeOfYe from "./pages/TypeOfYe";
 import KLKNotFound from "./pages/KLKNotFound";
 
 const App = () => {
+  const [userInput, setUserInput] = useState("");
+  const handleInput = (event) => {
+    setUserInput(event.target.value);
+  };
   return (
     <div className='App'>
+      <h1></h1>
       <Header />
-
       <Routes>
         <Route path='/' element={<Home />} />
         <Route path='/aboutus' element={<AboutUs />} />
@@ -38,3 +43,5 @@ const App = () => {
 };
 
 export default App;
+
+<></>;

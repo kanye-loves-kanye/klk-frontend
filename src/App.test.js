@@ -1,6 +1,6 @@
-import { render, screen } from '@testing-library/react';
+import { render, screen } from "@testing-library/react";
 import { BrowserRouter } from "react-router-dom";
-import App from './App';
+import App from "./App";
 
 describe("<App />", () => {
   it("renders a nav list", () => {
@@ -8,8 +8,14 @@ describe("<App />", () => {
       <BrowserRouter>
         <App />
       </BrowserRouter>
-    )
-    const list = screen.getByRole("list");
-    expect(list).toBeInTheDocument();
+    );
+    const fb = screen.getByRole("link", {
+      name: /facebook/i,
+    });
+    const ig = screen.getByRole("link", {
+      name: /instagram/i,
+    });
+    expect(fb).toBeInTheDocument();
+    expect(ig).toBeInTheDocument();
   });
 });
