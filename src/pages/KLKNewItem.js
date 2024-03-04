@@ -1,9 +1,7 @@
-import React from 'react'
+import React from "react";
 
 const KLKNewItem = () => {
-  return (
-    <div>KLKNewItem</div>
-  )
-}
+  return <div>KLKNewItem</div>;
+};
 
-export default KLKNewItem
+export default KLKNewItem;

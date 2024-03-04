@@ -13,6 +13,7 @@ const Header = ({ userProfile }) => {
             Home
           </NavLink>
         </NavItem>
+
         <NavItem>
           <NavLink to="/collection" className="nav-link">
             Collection
@@ -26,12 +27,12 @@ const Header = ({ userProfile }) => {
                 My Collection
               </NavLink>
             </NavItem>
+
             <NavItem>
               <NavLink to="/klknewitem" className="nav-link">
                 Add Item
               </NavLink>
             </NavItem>
-
           </>
         )}
 
@@ -42,13 +43,17 @@ const Header = ({ userProfile }) => {
                 Sign In
               </NavLink>
             </NavItem>
+
+
             <NavItem>
               <NavLink to="/signup" className="nav-link">
                 Sign Up
               </NavLink>
             </NavItem>
           </>
+
         )}
+        
       </Nav>
     </header>
   )
