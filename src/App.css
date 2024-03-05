@@ -39,12 +39,34 @@
   width: 100%;
 }
 
-.notfoundtext {
+.yeezy-trope {
+  align-content: space-between;
+  background-image: url('./assets/yeezyTaughtMe.jpeg');
+  background-size: 90%;
+  background-position: 49% 60%;
+  height: 100vh;
+  background-repeat: no-repeat;
+  margin: 20px;
+  font-size: 30px;
+  font-family: "Caveat", cursive;
+  background-color: #ffffff;
+  color: #dc0404;
+  padding: 200px;
+  align-items: center;
 }
-
-.Noyeezy {
+.boton {
+  border-style: solid;
+  border-width: 2px;
+  border-color: #333;
+  border-radius: 50px;
+  font-size: 20px;
+  font-family: "Caveat", cursive;
+  background-color: hsl(0, 2%, 89%);
+  color: #dc0404;
+  padding: 10px;
+  text-align: center;
+  align-items: center;
 }
-
 a {
   font-family: "Oswald", sans-serif;
   color: #dc0404 !important;
@@ -53,4 +75,14 @@ a {
 
 a.active {
   text-decoration: underline !important;
+}
+
+.notfoundtext {
+  font-family: "Oswald", sans-serif;
+  color: #dc0404 !important;
+
+}
+
+.noyeezy {
+  font-family: "Oswald", sans-serif;
 }

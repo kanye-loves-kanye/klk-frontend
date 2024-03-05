@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import yeezyTaughtme from "../assets/yeezyTaughtMe.jpeg"; 
 
 const yeezyQuotes = [
   "Yo, Taylor, I'm really happy for you. Imma let you finish. But Beyoncé had one of the best videos of all time.",
@@ -36,9 +37,12 @@ const Inspiration = () => {
 
   return (
     <>
-      <h3>Yeezy Bot says</h3>
-      <button onClick={generateQuote}>Generate Random Quote</button>
-      {quote && <p>{quote}</p>}
+      <div className="yeezy-trope"> 
+      <br></br>
+      <button className="boton" onClick={generateQuote}>Yeezy Says,</button>
+        <br></br>
+        {quote && <p>{quote}</p>} 
+      </div>
     </>
   );
 };
