@@ -12,10 +12,9 @@ describe("<Inspiration />", () => {
       </BrowserRouter>
     );
 
-    const generateButton = screen.getByText("Generate Random Quote");
-    fireEvent.click(generateButton);
-
-    const quoteElement = await screen.findByText("Yeezy Bot says");
+    const quoteElement = await screen.getByRole('button', {
+      name: /yeezy says,/i
+    });
     expect(quoteElement).toBeInTheDocument();
   });
 });

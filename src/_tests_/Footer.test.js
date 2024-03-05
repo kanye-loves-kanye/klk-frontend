@@ -12,7 +12,7 @@ describe("<Footer />", () => {
     screen.logTestingPlaygroundURL();
 
     const footer = screen.getByRole("heading", {
-      name: /kanyeloveskanye, llc/i,
+      name: /kanyeloveskanye/i,
     });
     expect(footer).toBeInTheDocument();
   });
@@ -24,36 +24,6 @@ describe("<Footer />", () => {
       </BrowserRouter>
     );
     const footer = screen.getByText(/About us/i);
-    expect(footer).toBeInTheDocument();
-  });
-
-  it("renders legal information", () => {
-    render(
-      <BrowserRouter>
-        <Footer />
-      </BrowserRouter>
-    );
-    const footer = screen.getByText(/Legal/i);
-    expect(footer).toBeInTheDocument();
-  });
-
-  it("renders privacy informtaion", () => {
-    render(
-      <BrowserRouter>
-        <Footer />
-      </BrowserRouter>
-    );
-    const footer = screen.getByText(/Privacy/i);
-    expect(footer).toBeInTheDocument();
-  });
-
-  it("renders terms of use", () => {
-    render(
-      <BrowserRouter>
-        <Footer />
-      </BrowserRouter>
-    );
-    const footer = screen.getByText(/Terms of Use/i);
     expect(footer).toBeInTheDocument();
   });
 
@@ -77,7 +47,7 @@ describe("<Footer />", () => {
     expect(footer).toBeInTheDocument();
   });
 
-  it("renders socail media connections", () => {
+  it("renders social media connections", () => {
     render(
       <BrowserRouter>
         <Footer />

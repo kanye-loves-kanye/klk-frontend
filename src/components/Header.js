@@ -2,8 +2,12 @@ import React from 'react'
 import { Nav, NavItem } from 'reactstrap'
 import { NavLink, useNavigate } from 'react-router-dom'
 
-const Header = ({ userProfile }) => {
+const Header = ({ currentUser, logout }) => {
   const navigate = useNavigate()
+  const handleClick = () => {
+    logout()
+    navigate("/")
+  }
 
   return (
     <header className="header">
@@ -20,7 +24,13 @@ const Header = ({ userProfile }) => {
           </NavLink>
         </NavItem>
 
-        {userProfile && (
+        <NavItem>
+          <NavLink to="/inspiration" className="nav-link">
+            Inspiration
+          </NavLink>
+        </NavItem>
+
+        {currentUser && (
           <>
             <NavItem>
               <NavLink to="/mycollection" className="nav-link">
@@ -33,13 +43,19 @@ const Header = ({ userProfile }) => {
                 Add Item
               </NavLink>
             </NavItem>
+
+            <NavItem>
+              <NavLink className="nav-link" onClick={handleClick}>
+                Log Out
+              </NavLink>
+            </NavItem>
           </>
         )}
 
-        {!userProfile && (
+        {!currentUser && (
           <>
             <NavItem>
-              <NavLink to="/signin" className="nav-link">
+              <NavLink to="/login" className="nav-link">
                 Sign In
               </NavLink>
             </NavItem>

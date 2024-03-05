@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import "./App.css";
 import { Routes, Route } from "react-router-dom";
 import AboutUs from "./components/AboutUs";
@@ -16,24 +16,97 @@ import TypeOfYe from "./pages/TypeOfYe";
 import KLKNotFound from "./pages/KLKNotFound";
 
 const App = () => {
-  const [userInput, setUserInput] = useState("");
-  const handleInput = (event) => {
-    setUserInput(event.target.value);
-  };
+  const [currentUser, setCurrentUser] = useState(null)
+  const [collections, setCollections] = useState([])
+  // const [collections, setCollections] = useState(mockCollections)
+
+  useEffect(() => {
+    const loggedInUser = localStorage.getItem("user")
+    if(loggedInUser) {
+      setCurrentUser(JSON.parse(loggedInUser))
+    }
+  },[])
+
+  const signin = (userInfo) => {
+    fetch("http://localhost:3000/login", {
+      body: JSON.stringify(userInfo),
+      headers: {
+        "Content-Type": "application/json",
+        "Accept": "application/json"
+      },
+      method: "POST"
+    })
+    .then((response) => {
+      if (!response.ok) {
+        throw Error(response.statusText);
+      }
+      localStorage.setItem("token", response.headers.get("Authorization"));
+      return response.json();
+    })
+    .then((payload) => {
+      if (payload) {
+        localStorage.setItem("user", JSON.stringify(payload));
+        setCurrentUser(payload);
+      }
+    })
+    .catch(error => console.log("Sign in errors: ", error));
+  }
+  
+  const signup = (userInfo) => {
+    fetch("http://localhost:3000/signup", {
+      body: JSON.stringify(userInfo),
+      headers: {
+        "Content-Type": "application/json",
+        "Accept": "application/json"
+      },
+      method: "POST"
+    })
+    .then((response) => {
+      if (!response.ok) {
+        throw Error(response.statusText);
+      }
+      localStorage.setItem("token", response.headers.get("Authorization"));
+      return response.json();
+    })
+    .then((payload) => {
+      if (payload) {
+        localStorage.setItem("user", JSON.stringify(payload));
+        setCurrentUser(payload);
+      }
+    })
+    .catch(error => console.log("Sign up errors: ", error));
+  }
+ 
+  const logout = () => {
+    fetch(`http://localhost:3000/logout`, {
+      headers: {
+        "Content-Type": "application/json",
+        Authorization: localStorage.getItem("token"), //retrieve the token
+      },
+      method: "DELETE",
+    })
+      .then((payload) => {
+        localStorage.removeItem("token") // remove the token
+        localStorage.removeItem("user")
+        setCurrentUser(null)
+      })
+      .catch((error) => console.log("log out errors: ", error))
+  }
+
   return (
     <div className='App'>
-      <Header />
+      <Header currentUser={currentUser} logout={logout}/>
       <Routes>
         <Route path='/' element={<Home />} />
         <Route path='/aboutus' element={<AboutUs />} />
         <Route path='/collection' element={<Collection />} />
         <Route path='/inspiration' element={<Inspiration />} />
-        <Route path='/klk-edit' element={<KLKEdit />} />
-        <Route path='/klk-new-item' element={<KLKNewItem />} />
-        <Route path='/my-collection' element={<MyCollection />} />
-        <Route path='/sign-in' element={<SignIn />} />
-        <Route path='/sign-up' element={<SignUp />} />
-        <Route path='/type-of-ye' element={<TypeOfYe />} />
+        <Route path='/klkedit' element={<KLKEdit />} />
+        <Route path='/klknewitem' element={<KLKNewItem />} />
+        <Route path='/mycollection' element={<MyCollection />} />
+        <Route path='/login' element={<SignIn signin={signin} />} />
+        <Route path='/signup' element={<SignUp signup={signup} />} />
+        <Route path='/typeofye' element={<TypeOfYe />} />
         <Route path='*' element={<KLKNotFound />} />
       </Routes>
       <Footer />
@@ -42,5 +115,3 @@ const App = () => {
 };
 
 export default App;
-
-<></>;

@@ -5,9 +5,9 @@ const KLKNotFound = () => {
   return (
     <>
       <img src={NotFound} alt='HiResNotFound' className='main-content-image' />
-      <h1 className='notfoundtext'>NOT FOUND </h1>
+      <h1 className='notfoundtext'>404 NOT FOUND </h1>
       <b> </b>
-      <h2 className='Noyeezy'> You aint got no Yeezy!??!</h2>
+      <h2 className='noyeezy'> You Aint Got No Yeezy!??!</h2>
     </>
   );
 };
