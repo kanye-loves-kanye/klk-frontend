@@ -41,7 +41,6 @@ const Inspiration = () => {
       <br></br>
       <button className="boton" onClick={generateQuote}>Yeezy Says,</button>
         <br></br>
-       {/* <p><h3>Yeezy Says,</h3> </p> */}
         {quote && <p>{quote}</p>} 
       </div>
     </>

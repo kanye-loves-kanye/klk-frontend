@@ -18,7 +18,6 @@ import KLKNotFound from "./pages/KLKNotFound";
 const App = () => {
   const [currentUser, setCurrentUser] = useState(null)
   const [collections, setCollections] = useState([])
-  // const [collections, setCollections] = useState(mockCollections)
 
   useEffect(() => {
     const loggedInUser = localStorage.getItem("user")
@@ -81,12 +80,12 @@ const App = () => {
     fetch(`http://localhost:3000/logout`, {
       headers: {
         "Content-Type": "application/json",
-        Authorization: localStorage.getItem("token"), //retrieve the token
+        Authorization: localStorage.getItem("token"),
       },
       method: "DELETE",
     })
       .then((payload) => {
-        localStorage.removeItem("token") // remove the token
+        localStorage.removeItem("token")
         localStorage.removeItem("user")
         setCurrentUser(null)
       })
