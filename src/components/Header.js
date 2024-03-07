@@ -30,6 +30,8 @@ const Header = ({ currentUser, logout }) => {
           </NavLink>
         </NavItem>
 
+
+
         {currentUser && (
           <>
             <NavItem>
@@ -38,6 +40,12 @@ const Header = ({ currentUser, logout }) => {
               </NavLink>
             </NavItem>
 
+            <NavItem>
+              <NavLink to="/typeofye" className="nav-link">
+                What's your TYPE?
+              </NavLink>
+            </NavItem>
+            
             <NavItem>
               <NavLink to="/klknewitem" className="nav-link">
                 Add Item
