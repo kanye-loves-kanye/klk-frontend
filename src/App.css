@@ -15,6 +15,12 @@
   display: flex;
   justify-content: space-between;
 }
+.previous {
+  color: red !important;
+}
+.next {
+  color: red !important;
+}
 
 .footer {
   padding: 1rem;
