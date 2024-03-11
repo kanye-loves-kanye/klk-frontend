@@ -1,59 +1,59 @@
 const albumItems = [
   {
     item: 'https://i.postimg.cc/KYpGYCTF/Kanyewest-collegedropout.jpg',
-    caption: '',
+    caption: 'College Dropout',
   },
   {
     item: 'https://i.postimg.cc/PJZFB8H9/lateregistration.jpg',
-    caption: '',
+    caption: 'Late Registration',
   },
   {
     item: 'https://i.postimg.cc/rsRY0hcd/Graduation-album.jpg',
-    caption: '',
+    caption: 'Graduation',
   },
   {
     item: 'https://i.postimg.cc/nzmkzbWQ/808hb.jpg',
-    caption: '',
+    caption: '808',
   },
   {
     item: 'https://i.postimg.cc/L4rmywJb/mbdtf.jpg',
-    caption: '',
+    caption: 'MBDTF',
   },
   {
     item: 'https://i.postimg.cc/Y0gBK2vy/watchthethrone.jpg',
-    caption: '',
+    caption: 'Watch the Throne',
   },
   {
     item: 'https://i.postimg.cc/k4Lp1v0W/Cruel-Summercover.jpg',
-    caption: '',
+    caption: 'Cruel Summer',
   },
   {
     item: 'https://i.postimg.cc/C53skFZg/Kanye-West-Yeezus-cover-art.jpg',
-    caption: '',
+    caption: 'Yeezus',
   },
   {
     item: 'https://i.postimg.cc/KvBxCfLv/tlop.webp',
-    caption: '',
+    caption: 'The Life of Pablo',
   },
   {
     item: 'https://i.postimg.cc/pL4Rj4CB/Yealbum.webp',
-    caption: '',
+    caption: 'Ye',
   },
   {
     item: 'https://i.postimg.cc/G2PXKnjn/kadssaw.webp',
-    caption: '',
+    caption: 'Kids See Ghost',
   },
   {
     item: 'https://i.postimg.cc/LsLD4Fwg/kingisjesus.webp',
-    caption: '',
+    caption: 'Jesus is King',
   },
   {
     item: 'https://i.postimg.cc/sXf6gDWH/donda.png',
-    caption: '',
+    caption: 'Donda',
   },
   {
     item: 'https://i.postimg.cc/9MSdHWY7/vulgen.png',
-    caption: '',
+    caption: '¥$',
   },
   // Add more slides as needed
 ];
