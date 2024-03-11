@@ -4,12 +4,12 @@ import mockAlbum from "../mockAlbum"
 import mockShirt from "../mockShirt";
 import mockShoe from "../mockShoe";
 
-const Collection = () => {
+const Collection = ({onAddToCollection}) => {
   return (
     <div>
-      <CustomCarousel items={mockAlbum} />
-      <CustomCarousel items={mockShirt} />
-      <CustomCarousel items={mockShoe} />
+      <CustomCarousel items={mockAlbum} onAddToCollection={onAddToCollection}/>
+      <CustomCarousel items={mockShirt} onAddToCollection={onAddToCollection}/>
+      <CustomCarousel items={mockShoe} onAddToCollection={onAddToCollection}/>
     </div>
   );
 };
