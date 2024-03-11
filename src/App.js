@@ -91,6 +91,18 @@ const App = () => {
       })
       .catch((error) => console.log("log out errors: ", error))
   }
+  const onAddToCollection = (itemAddedToCollection) => {
+    fetch("http://localhost:3000/collections", {
+      body: JSON.stringify({item: itemAddedToCollection.item, caption: itemAddedToCollection.caption, user_id: currentUser.id}),
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json"
+      }
+    })
+      .then((response) => response.json())
+      // .then(() => readCat())
+      .catch((errors) => console.log("Collection create errors:", errors))
+  }
 
   return (
     <div className='App'>
@@ -98,7 +110,7 @@ const App = () => {
       <Routes>
         <Route path='/' element={<Home />} />
         <Route path='/aboutus' element={<AboutUs />} />
-        <Route path='/collection' element={<Collection />} />
+        <Route path='/collection' element={<Collection onAddToCollection={onAddToCollection} />} />
         <Route path='/inspiration' element={<Inspiration />} />
         <Route path='/klkedit' element={<KLKEdit />} />
         <Route path='/klknewitem' element={<KLKNewItem />} />

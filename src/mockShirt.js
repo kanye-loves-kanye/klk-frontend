@@ -1,32 +1,26 @@
 const shirtItems = [
   {
-    src: 'https://i.postimg.cc/G2QNHpt2/Chickfila.jpg',
-    altText: '',
+    item: 'https://i.postimg.cc/G2QNHpt2/Chickfila.jpg',
     caption: '',
   },
   {
-    src: 'https://i.postimg.cc/sD18gsrj/Mamba.jpg',
-    altText: '',
+    item: 'https://i.postimg.cc/sD18gsrj/Mamba.jpg',
     caption: '',
   },
   {
-    src: 'https://i.postimg.cc/prLS8t5B/No-More-Parties.jpg',
-    altText: '',
+    item: 'https://i.postimg.cc/prLS8t5B/No-More-Parties.jpg',
     caption: '',
   },
   {
-    src: 'https://i.postimg.cc/c4jzK2xQ/Pablocombo.jpg',
-    altText: '',
+    item: 'https://i.postimg.cc/c4jzK2xQ/Pablocombo.jpg',
     caption: '',
   },
   {
-    src: 'https://i.postimg.cc/PfS9HN0V/Ultralightbeams.jpg',
-    altText: '',
+    item: 'https://i.postimg.cc/PfS9HN0V/Ultralightbeams.jpg',
     caption: '',
   },
   {
-    src: 'https://i.postimg.cc/3NfcFbgQ/Votekanye.jpg',
-    altText: '',
+    item: 'https://i.postimg.cc/3NfcFbgQ/Votekanye.jpg',
     caption: '',
   },
 ];

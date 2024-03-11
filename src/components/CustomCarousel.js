@@ -1,10 +1,9 @@
 import React, { useState } from 'react';
 import {Carousel, CarouselItem, CarouselControl, CarouselIndicators, CarouselCaption} from 'reactstrap';
 
-const CustomCarousel = ({ items }) => {
+const CustomCarousel = ({ items, onAddToCollection }) => {
   const [activeIndex, setActiveIndex] = useState(0);
   const [animating, setAnimating] = useState(false);
-
 
   const next = () => {
     if (animating) return;
@@ -29,7 +28,7 @@ const CustomCarousel = ({ items }) => {
       onExited={() => setAnimating(false)}
       key={index}
     >
-      <img src={item.src} alt={item.altText} />
+      <img src={item.item} alt={item.caption} />
       <CarouselCaption captionText={item.caption} captionHeader={item.caption} />
       <br/>
       <a>
@@ -48,15 +47,5 @@ const CustomCarousel = ({ items }) => {
     </Carousel>
   );
 }
-
-// const Example = () => (
-//   <>
-//     <AlbumCarousel />
-//     <br />
-//     <ShirtCarousel />
-//     <br />
-//     <ShoeCarousel />
-//   </>
-// );
 
 export default CustomCarousel;
